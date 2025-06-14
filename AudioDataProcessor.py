@@ -16,7 +16,7 @@ from pydub import AudioSegment
 class AudioDataProcessor:
     def __init__(self, path_to_audiofiles):
         self.path_to_audiofiles = path_to_audiofiles
-        pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization-3.1", use_auth_token='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')
+        pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization-3.1", use_auth_token='')
         pipeline.to(torch.device("cuda"))
         self.pipeline = pipeline
     
